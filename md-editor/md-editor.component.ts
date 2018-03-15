@@ -92,7 +92,7 @@ export class MarkdownEditorComponent implements ControlValueAccessor, Validator 
 
   editor: any;
 
-  showPreviewPanel: boolean = true;
+  @Input() showPreviewPanel: boolean = true;
   isFullScreen: boolean = false;
 
   _markedOpt: any;
