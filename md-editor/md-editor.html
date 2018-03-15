@@ -8,12 +8,22 @@
                 <mat-icon>format_italic</mat-icon>
             </button>
             <button mat-icon-button type="button" title="Heading" (click)="insertContent('Heading')" *ngIf="!_hideIcons.Heading">
-                <mat-icon>format_bold</mat-icon>
+                <mat-icon>format_size</mat-icon>
             </button>
             <button mat-icon-button type="button" title="Refrence" (click)="insertContent('Refrence')" *ngIf="!_hideIcons.Refrence">
                 <mat-icon>format_quote</mat-icon>
             </button>
-
+            <button mat-icon-button type="button" title="Link" (click)="insertContent('Link')" *ngIf="!_hideIcons.Link">
+                <mat-icon>link</mat-icon>
+            </button>
+            <button mat-icon-button type="button" title="Image" (click)="insertContent('Image')" *ngIf="!_hideIcons.Image">
+                <mat-icon>image</mat-icon>
+            </button>
+            <button mat-icon-button type="button" [attr.title]="showPreviewPanel ? 'Hide Preview' : 'Show Preview'" (click)="togglePreview()"
+                *ngIf="!_hideIcons.TogglePreview">
+                <mat-icon *ngIf='showPreviewPanel'>visibility</i>
+                <mat-icon *ngIf='!showPreviewPanel'>visibility_off</i>
+            </button>
 
             <!-- <button class="btn btn-sm btn-default" type="button" title="Italic" (click)="insertContent('Italic')" *ngIf="!_hideIcons.Italic">
                 <i class="fa fa-italic"></i>
