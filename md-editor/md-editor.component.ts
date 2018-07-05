@@ -143,8 +143,13 @@ export class MarkdownEditorComponent implements ControlValueAccessor, Validator 
         this.editor.$blockScrolling = Infinity;
         this.editor.getSession().setUseWrapMode(true);
         this.editor.getSession().setMode("ace/mode/markdown");
-        this.editor.setTheme("ace/theme/github");
+        this.editor.setTheme("");
         this.editor.setValue(this.markdownValue || '');
+        this.editor.setOptions({
+            theme: "ace/theme/github",
+            minLines: 2,
+            maxLines: 50
+        });
 
         this.editor.on("change", (e: any) => {
             let val = this.editor.getValue();
