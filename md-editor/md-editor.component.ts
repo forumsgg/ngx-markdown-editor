@@ -146,9 +146,7 @@ export class MarkdownEditorComponent implements ControlValueAccessor, Validator 
         this.editor.setTheme("");
         this.editor.setValue(this.markdownValue || '');
         this.editor.setOptions({
-            theme: "ace/theme/github",
-            minLines: 2,
-            maxLines: 50
+            theme: "ace/theme/github"
         });
 
         this.editor.on("change", (e: any) => {
